@@ -286,7 +286,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <ul>
-<li>The Smartcab is not moving according to each trial. However, all the other cars are moving, or changing directions, or waiting for the light to change. Also, the traffice lights are changing all the time, with green, yellon and red.</li>
+<li>The Smartcab is not moving according to each trial. However, all the other cars are moving, or changing directions, or waiting for the light to change. Also, the traffice lights are changing all the time, with green and red.</li>
 <li>Rewards:<ul>
 <li>Agent at a red light: idle (positive rewards), move (negative rewards)</li>
 <li>There is a green light with no oncoming traffic: idle (negative rewards), move (positive rewards)</li>
@@ -5128,11 +5128,11 @@ se6iVhKrAAAAAElFTkSuQmCC
 -- None : 0.69
 -- left : 0.55</code></pre>
 <ul>
-<li>When <em><code>green</code></em> light, there is oncoming vehicle turning left and the left side vehicle is turning right, since the destination is right to the smartcab, it should turn right, and the policy also gives <em><code>right</code></em> the highest reward, however, it will cause accident since the oncoming vehicle are making left turn.</li>
-<li>With more training, the rewards for this state would probably have been adjusted.</li>
+<li>When <em><code>green</code></em> light, there is oncoming vehicle turning left and the left side vehicle is turning right, since the destination is right to the smartcab, it should turn right, and the policy also gives <em><code>right</code></em> the highest reward, however, and the oncoming vehicle could yeild to the smartcab</li>
 </ul>
 </li>
 </ul>
+<p>After checking all the policies in detail, I didn't find any sub-optimal, all policies are optimal. There improved Q-learner are very smart.</p>
 
 </div>
 </div>
