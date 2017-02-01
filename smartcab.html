@@ -5128,11 +5128,23 @@ se6iVhKrAAAAAElFTkSuQmCC
 -- None : 0.69
 -- left : 0.55</code></pre>
 <ul>
-<li>When <em><code>green</code></em> light, there is oncoming vehicle turning left and the left side vehicle is turning right, since the destination is right to the smartcab, it should turn right, and the policy also gives <em><code>right</code></em> the highest reward, however, and the oncoming vehicle could yeild to the smartcab</li>
+<li>When <em><code>green</code></em> light, there is oncoming vehicle turning left and the left side vehicle is turning right, since the destination is right to the smartcab, it should turn right, and the policy also gives <em><code>right</code></em> the highest reward, the oncoming vehicle could yeild to the smartcab</li>
 </ul>
 </li>
 </ul>
-<p>After checking all the policies in detail, I didn't find any sub-optimal, all policies are optimal. There improved Q-learner are very smart.</p>
+<ul>
+<li>An sub-optimal example
+<pre><code>  ('right', 'red', None, 'left')
+-- forward : -10.25
+-- right : 1.20
+-- None : 1.47
+-- left : -24.80</code></pre>
+<ul>
+<li>When <em><code>red</code></em> light, there is no oncoming vehicle and the left side vehicle is turning left, since the destination is right to the smartcab, it should turn right and it is safe to make a right turn at this point, however, the policy also gives <em><code>None</code></em> the highest reward, thus the vehicle should rather wait instead of turn right. </li>
+<li>This is a definately sub-optimal policy. Regarding those decision options, though given a similar reward, the <em><code>right</code></em> still yeild to <em>None</em>, which could be improved by more training trials. </li>
+</ul>
+</li>
+</ul>
 
 </div>
 </div>
